@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  festival_id: 1
+  festival_name: MyString
+  festival_desc: MyString
+  festival_date: 2012-08-01
+
+two:
+  festival_id: 1
+  festival_name: MyString
+  festival_desc: MyString
+  festival_date: 2012-08-01

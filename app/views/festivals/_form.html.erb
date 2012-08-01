@@ -1,0 +1,33 @@
+<%= form_for(@festival) do |f| %>
+  <% if @festival.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@festival.errors.count, "error") %> prohibited this festival from being saved:</h2>
+
+      <ul>
+      <% @festival.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :festival_id %><br />
+    <%= f.number_field :festival_id %>
+  </div>
+  <div class="field">
+    <%= f.label :festival_name %><br />
+    <%= f.text_field :festival_name %>
+  </div>
+  <div class="field">
+    <%= f.label :festival_desc %><br />
+    <%= f.text_field :festival_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :festival_date %><br />
+    <%= f.date_select :festival_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

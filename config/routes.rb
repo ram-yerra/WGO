@@ -1,4 +1,6 @@
 WgoRails::Application.routes.draw do
+  resources :festivals
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
