@@ -5,8 +5,9 @@ class FestivalsController < ApplicationController
     @festivals = Festival.all
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @festivals }
+      format.html { render json: @festivals, :callback => params[:callback] }
+      format.js  { render :json => @festivals, :callback => params[:callback] }
+      format.json { render json: @festivals, :callback => params[:callback] }
     end
   end
 
